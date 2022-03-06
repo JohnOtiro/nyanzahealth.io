@@ -1,0 +1,409 @@
+*{
+margin:0;
+padding:0;
+text-decoration:none;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background:red;
+    color: #fff;
+}
+.navbar{
+position:fixed;
+background:transparent;
+width:100%;
+padding: 30px 0;
+top:0;
+z-index:995;
+transition: .3s linear;
+}
+.inner-width{
+max-width:1300px;
+margin:auto;
+    padding: 0 40px;
+}
+.navbar .inner-width{
+display:flex;
+align-items:center;
+    justify-content:space-between;
+}
+.logo{
+width: 40px;
+height:32px;
+background-image: url(images/logo1.png);
+background-size:contain;
+background-repeat: no-repeat;    
+}
+.menu-toggler{
+    background:none;
+    width: 34px;
+    border: none;
+    cursor: pointer;
+    position:relative;
+    outline: none;
+    z-index: 995;
+    display:none;
+}
+.menu-toggler span{
+   display:block;
+height: 3px;
+   background:red;
+    margin: 6px 0;
+    position: relative;
+    transition: 0.5s linear;
+}
+.navbar-menu a{
+color:red;
+    font-size:18px;
+font-weight:500;
+    margin-left:30px;
+transition:.2s linear;
+}
+.sticky{
+    background:red;
+    padding:18px 0;
+}
+/*.sticky .logo{
+    background-image:url(images/logo.png);
+}*/
+.sticky .navbar-menu a{
+    color:#fff;
+}
+.sticky .menu-toggler span{
+    background:#fff;
+}
+#home{
+    height: 100vh;
+    min-height:500px;
+    background-image:url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+}
+#home .inner-width{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    text-align:center;
+}
+#home .content{
+    width:100%;
+    color:#fff;
+}
+#home .content h1{
+    font-size:60px;
+    margin-bottom:60px;
+    color: red;
+}
+#home .buttons{
+    margin-top:60px;
+}
+#home .buttons a{
+    display: inline-block;
+    margin:15px 20px;
+    color:#fff;
+    font-size:18px;
+    font-weight:500;
+    width:180px;
+    border:2px solid red;
+    padding:14px 0;
+    border-radius:6px;
+    transition:.2s linear;
+}
+#home .buttons a:hover, 
+#home .buttons a:nth-child(2)
+{
+    background:#fff;
+    color:red;
+}
+@media screen and (max-width:900px){
+    .menu-toggler{
+        display:block;
+        margin-right:20px;
+    }
+    .navbar-menu{
+    position: fixed;
+    height: 100vh;
+    width:100%;
+    background-color:#fdfdfd;
+    top:0;
+    right:-100%;
+    max-width:400px;
+    padding:80px 50px;
+    transition:.3s linear;
+    }
+    .navbar-menu a{
+        display: block;
+        font-size:28px;
+        margin:15px 0;
+    }
+    .sticky .navbar-menu{
+ background:red;
+        color:#fff;
+    }
+    .navbar-menu.active{
+        right:0;
+    }
+    .menu-toggler.active span:nth-child(1){
+transform:rotate(-45deg);
+    top:4px;
+    }
+    .menu-toggler.active span:nth-child(2){
+    opacity:0;
+    }
+    .menu-toggler.active span:nth-child(3){
+transform:rotate(45deg);
+bottom:14px;
+    }
+}
+
+.con{
+    width:100%
+    
+}
+.title{
+    text-align: center;
+    color:#111;
+    font-family:sans-serif;
+    font-size:35px;
+    margin:30px 10px;
+}
+#about{
+    padding-top: 90px;
+}
+#about .border{
+    margin: auto;
+    width:150px;
+    background:red;
+    height:3px;
+    padding-top:3px;
+    border-radius:5px;
+}
+.con-box{
+    width:100%;
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:50px 0;
+    padding:0 20px;
+}
+.about-text{
+    width:calc(33% - 20px);
+    text-align:center;
+}
+.about-text h2{
+    margin: 10px 0;
+    color: #444;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.about-text p{
+    font-size: 14px;
+    text-align:left;
+    line-height: 35px;
+    margin-top: 25px;
+}
+#mission  .border{ 
+    width: 180px;
+    height: 3px;
+    border-radius: 5px;
+    background: red;
+    margin: auto;
+}
+.mic-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin:100px 50px;
+}
+.sec1{
+    width: calc(33% - 20px);
+    height:240x;
+    text-align: center;
+    background-color: red;
+    color:#fff;
+    border-radius: 6px;
+    margin: 10px 5px;
+    padding: 40px 20px;
+    justify-content:center;
+}
+.sec1 h2{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+section{
+   padding-top:40px; 
+}
+#do{
+    padding-top:90px;
+}
+#do .border{
+    width: 180px;
+    height: 3px;
+    border-radius: 5px;
+    background: red;
+    margin: auto;
+    
+}
+.work{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:100px 50px;
+}
+.con-work{
+    width:calc(33% - 20px);
+    max-height: 640px;
+    justify-content:center;
+    text-align: center;
+    align-items: center;
+    border:2px solid red;
+    padding:40px 20px;
+    border-radius: 6px;
+    margin:15px 0;
+    overflow: hidden;
+}
+
+.con-work h2{
+    font-size:20px;
+    font-family:sans-serif;
+    margin:10px 0;
+}
+.con-work p{
+    font-size:15px;
+    text-align: left;
+    line-height: 22px;
+}
+.con-work:hover{
+    background: red;
+    color: #fff;
+}
+#contact{
+    padding:100px 0;
+}
+#contact .title{
+    text-align: center;
+    font-family: sans-serif;
+    color: #111;
+    margin-bottom:10px;
+}
+#contact .border{
+    width: 120px;
+    height:3px;
+    margin: auto;
+    background:red;
+}
+.contact{
+display:flex;
+justify-content:space-between;
+flex-wrap: wrap;
+margin: 100px 50px;
+}
+.in{
+    width:calc(33% - 20px);
+    height:160px;
+    background: red;
+    color:#fff;
+    border-radius:6px;
+    text-align:center;
+    padding:20px 20px;
+}
+ .in p{
+    margin:30px 0;
+     font-size:35px;
+     color:#fff;
+     font-family: sans-serif;
+}
+.in span{
+    font-size:18px;
+    color:#fdfdfd;
+    
+}
+@media screen and (max-width:900px) {
+    .inner-width{
+    max-width:800px;
+    }
+    .sec1{
+        width:100%;
+    }
+    .con-work{
+        width:100%;
+        height:auto;
+    }
+    .about-text{
+        width:100%;
+        margin:10px 0;
+    }
+    .in{
+        width:100%;
+        margin:10px 0;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .inner-width{
+        padding: 0 20px;
+    }
+    .sec1{
+        width:100%;
+    }
+    .con-work{
+        width: 100%;
+        height:auto;
+    }
+    .about-text{
+    width: 100%;
+    margin:10px 0;
+    }
+     .in{
+        width: 100%;
+         margin:10px 0;
+}
+}
+footer{
+    width:100%;
+    height:180px;
+    background: url(images/peace%20torch.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding:15px;
+}
+.copyright{
+    text-align: center;
+    font-size:15px;
+    color:#fff;
+    font-weight:bold;
+    justify-content: center;
+    margin-top:10px;
+}
+.copyright span{
+    color:red;
+    font-weight:900;
+}
+.icons{
+    text-align:center;
+    color:#fff;
+    font-weight:500;
+    font-size:15px;
+    margin:10px 0;
+    align-items: center;
+    justify-content:center;
+}
+.icons a .fa{
+    font-size:20px;
+    margin:20px 15px;
+    color:#fff;
+}
+.icons .fa:hover{
+    color:red;
+}
